@@ -28,31 +28,48 @@ git submodule update --init --recursive
 echo "Building the site..."
 hugo
 
-# Stash any changes (including the public directory changes)
-echo "Stashing changes..."
-git add .
-git stash push -m "Temporary stash before deployment"
+# Check if build was successful
+if [ ! -d "public" ] || [ -z "$(ls -A public)" ]; then
+    echo "❌ Hugo build failed or public directory is empty!"
+    exit 1
+fi
 
-# Switch to gh-pages branch
+# Create a temporary directory for the built site
+TEMP_DIR=$(mktemp -d)
+echo "Copying built site to temporary directory: $TEMP_DIR"
+cp -r public/* "$TEMP_DIR/"
+
+# Switch to gh-pages branch (create if it doesn't exist)
 echo "Switching to gh-pages branch..."
-git checkout gh-pages || git checkout -b gh-pages || { echo "Failed to switch to gh-pages branch: $?"; exit 1; }
+git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages || { echo "Failed to switch to gh-pages branch"; exit 1; }
 
-# Restore the stashed changes
-echo "Restoring stashed changes..."
-git stash pop || { echo "No stash to pop, continuing..."; }
+# If this is a new orphan branch, remove all files
+if [ ! -f "index.html" ]; then
+    echo "Initializing new gh-pages branch..."
+    git rm -rf . 2>/dev/null || true
+fi
 
-# Remove all files except .git, public directory, and themes directory
+# Remove all files except .git
 echo "Cleaning gh-pages branch..."
-find . -maxdepth 1 ! -name '.git' ! -name 'public' ! -name 'themes' ! -name '.' -exec rm -rf {} \;
+find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} \; 2>/dev/null || true
 
-# Copy contents from public to root
-echo "Moving contents from public to root..."
-cp -r public/* .
-rm -rf public
+# Copy the built site from temp directory
+echo "Copying built site to gh-pages branch..."
+cp -r "$TEMP_DIR"/* .
+
+# Clean up temp directory
+rm -rf "$TEMP_DIR"
 
 # Add all changes to git
 echo "Adding changes to git..."
 git add .
+
+# Check if there are any changes to commit
+if git diff --staged --quiet; then
+    echo "No changes to deploy."
+    git checkout -
+    exit 0
+fi
 
 # Commit changes
 echo "Committing changes..."
@@ -66,4 +83,5 @@ git push origin gh-pages
 echo "Switching back to original branch..."
 git checkout -
 
-echo "Deployment complete!"
+echo "✅ Deployment complete!"
+echo "Your site should be available at: https://krshubham.github.io"
