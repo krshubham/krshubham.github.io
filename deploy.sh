@@ -83,5 +83,9 @@ git push origin gh-pages
 echo "Switching back to original branch..."
 git checkout -
 
+# Restore submodules after switching back
+echo "Restoring submodules..."
+git submodule update --init --recursive
+
 echo "✅ Deployment complete!"
 echo "Your site should be available at: https://krshubham.github.io"
