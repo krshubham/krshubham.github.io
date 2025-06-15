@@ -2,6 +2,8 @@
 
 # Check for uncommitted changes outside the public folder
 echo "Checking for uncommitted changes..."
+git config user.email "kumarshubham347@gmail.com"
+git config user.name "Kumar Shubham"
 if git status --porcelain | grep -v "^?? public/" | grep -v "^ M public/" | grep -v "^M  public/" | grep -q .; then
     echo "⚠️  WARNING: You have uncommitted changes outside the public folder:"
     git status --porcelain | grep -v "^?? public/" | grep -v "^ M public/" | grep -v "^M  public/"
