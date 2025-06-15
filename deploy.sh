@@ -68,6 +68,9 @@ git add .
 if git diff --staged --quiet; then
     echo "No changes to deploy."
     git checkout -
+    # Restore submodules after switching back
+    echo "Restoring submodules..."
+    git submodule update --init --recursive
     exit 0
 fi
 
