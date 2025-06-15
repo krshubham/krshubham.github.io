@@ -20,6 +20,10 @@ if git status --porcelain | grep -v "^?? public/" | grep -v "^ M public/" | grep
     fi
 fi
 
+# Ensure git submodules are initialized (for themes)
+echo "Initializing git submodules..."
+git submodule update --init --recursive
+
 # Build the site
 echo "Building the site..."
 hugo
@@ -37,9 +41,9 @@ git checkout gh-pages || git checkout -b gh-pages || { echo "Failed to switch to
 echo "Restoring stashed changes..."
 git stash pop || { echo "No stash to pop, continuing..."; }
 
-# Remove all files except .git and public directory
+# Remove all files except .git, public directory, and themes directory
 echo "Cleaning gh-pages branch..."
-find . -maxdepth 1 ! -name '.git' ! -name 'public' ! -name '.' -exec rm -rf {} \;
+find . -maxdepth 1 ! -name '.git' ! -name 'public' ! -name 'themes' ! -name '.' -exec rm -rf {} \;
 
 # Copy contents from public to root
 echo "Moving contents from public to root..."
