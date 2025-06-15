@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<link rel="icon" type="image/ico" href="https://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://example.org/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://example.org/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://example.org/apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    A Bytecode Week | Kumar Shubham
+    
+</title>
+
+<link rel="canonical" href="https://example.org/posts/a-bytecode-week/"/>
+
+<meta property="og:url" content="https://example.org/posts/a-bytecode-week/">
+  <meta property="og:site_name" content="Kumar Shubham">
+  <meta property="og:title" content="A Bytecode Week">
+  <meta property="og:description" content="final InsnList list = new InsnList(); list.add(new LdcInsnNode(new Integer(100)); // Load Constant instruction list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, &#34;java/lang/Thread&#34;, &#34;sleep&#34;, &#34;(J)V&#34;, false)); // Invoke the method // Look something like a stack machine? That&#39;s right, its the JVM bytecode. How many of us, do really study subjects like microprocessor, thinking that we are gonna use this knowledge further in our day to day job? I too was with that mindset in the college, but as you can see and will get to know further, these things have re-appeared 🤯🤯">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-05-17T13:27:03+05:30">
+    <meta property="article:modified_time" content="2019-05-17T13:27:03+05:30">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Bytecode">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.92c3bf7119b98cfdc79e93f36a451eb901d8bbbfed7d75814e6436cf6c9085dc.css" media="all">
+
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-xxxxxxxxx"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-xxxxxxxxx');
+        }
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="https://example.org/">Kumar Shubham</a>
+    </h1>
+
+    <div class="header-menu">
+        
+
+        
+        
+
+        <p
+            class="small ">
+            <a href="/" >
+                /Home
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/posts" >
+                /Posts
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/about" >
+                /About
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+<div class="breadcrumbs"><a href="/">Home</a><span class="breadcrumbs-separator">/</span><a href="/posts/">Posts</a><span class="breadcrumbs-separator">/</span>
+        <a href="/posts/a-bytecode-week/">A Bytecode Week</a></div>
+
+
+<div >
+  <article>
+    <header class="single-intro-container">
+        
+        <h1 class="single-title">A Bytecode Week</h1>
+        
+        <div class="single-subsummary">
+          
+          <div>
+            
+            <p class="single-date">
+              <time datetime="2019-05-17T13:27:03&#43;05:30">May 17, 2019</time>
+            </p>
+          </div>
+        </div>
+        
+    </header>
+    
+    <div class="single-content">
+      <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">final</span> InsnList list = <span style="font-weight:bold;text-decoration:underline">new</span> InsnList();
+</span></span><span style="display:flex;"><span>list.add(<span style="font-weight:bold;text-decoration:underline">new</span> LdcInsnNode(<span style="font-weight:bold;text-decoration:underline">new</span> Integer(100)); <span style="color:#888;font-style:italic">// Load Constant instruction</span>
+</span></span><span style="display:flex;"><span>list.add(<span style="font-weight:bold;text-decoration:underline">new</span> MethodInsnNode(Opcodes.INVOKESTATIC, <span style="color:#666;font-style:italic">&#34;java/lang/Thread&#34;</span>, <span style="color:#666;font-style:italic">&#34;sleep&#34;</span>, <span style="color:#666;font-style:italic">&#34;(J)V&#34;</span>, <span style="font-weight:bold;text-decoration:underline">false</span>)); <span style="color:#888;font-style:italic">// Invoke the method</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// Look something like a stack machine? That&#39;s right, its the JVM bytecode.</span>
+</span></span></code></pre></div><p>How many of us, do really study subjects like microprocessor, thinking that we are gonna use this knowledge further in our day to day job? I too was with that mindset in the college, but as you can see and will get to know further, these things have re-appeared 🤯🤯</p>
+<p>So let&rsquo;s come to the problem that we are solving.Suppose you have a java application, I am asking you to add a delay to all the method calls within this application, how would you do that?</p>
+<p>One idea is too add a Thread.sleep call to all the methods manually and then recompile the entire application and wow, there, you have a delay in all the method calls in your application, great job. Now what if I want to add a delay to random methods and not all at the same time.</p>
+<p>Think for some time, we can still do this manually right? Generate random float between 0 to 1 and if its greater than 0.5, or a defined threshold, then we can add a Thread.sleep call to this method, wow again we did it. Good job! 😏</p>
+<p>How scalable is that solution? Imagine we have thousands of methods and we use the above way to add Thread.sleep calls to the methods, well its fine if you have sprints that are year long but here at AppD we are trying to be as Agile as possible and thus such a way of solving this problem might be a problem in itself 😐.</p>
+<p>So how do we solve this? Here comes to rescue, an awesome solution which is a part of the JVM itself, the <strong>javaagent</strong>.</p>
+<p>For example</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Running your java application with a javaagent for instrumentation</span>
+</span></span><span style="display:flex;"><span>java -javaagent:/path/to/some-agent.jar -jar your-application.jar
+</span></span></code></pre></div><p>Now this <code>some-agent.jar</code> is actually the core part for solving this problem. This java agent allows you to modify or transform the classes as they are loaded into the JVM. It can even create new classes, all of this at runtime, without modifying a single line of code in your application. Think of how useful the javaagent can be! 🤯All of this is done by modifying bytecodes directly. Just to let you know, JVM is a stack machine basically and while modifying at the bytecode level you can get this feel very easily. Discussion of how we modified the bytecode to add new method calls, will be dealt in a later post. For now, just see how libraries like <a href="https://asm.ow2.io/">asm</a> allow you do this with a lot of flexibility.</p>
+<p>Also, in this week we had our team outing and we decided to go to <a href="https://torq03.com/">Torq03</a>, for some fun and chill. We had fun with Go Karting and bowling and finally I have to say: this team is ❤️.</p>
+
+    </div>
+  </article>
+
+  
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flexnowrap">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/posts/macos-mojave-review-developer-preview/">
+                        MacOS Mojave Review (Developer Beta)
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/posts/stc-2019/">
+                        Software Testing Conference 2019
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  
+  
+
+
+
+
+
+    
+
+
+
+
+  <footer>
+    
+
+    
+    
+
+
+
+
+
+    
+
+
+
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>
