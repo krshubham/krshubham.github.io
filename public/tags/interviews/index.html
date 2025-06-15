@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
+
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/interviews/index.xml" title="Kumar Shubham">
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    Interviews | Kumar Shubham
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/tags/interviews/"/>
+
+<meta property="og:url" content="http://localhost:1313/tags/interviews/">
+  <meta property="og:site_name" content="Kumar Shubham">
+  <meta property="og:title" content="Interviews">
+  <meta property="og:description" content="A Tech Blog">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.92c3bf7119b98cfdc79e93f36a451eb901d8bbbfed7d75814e6436cf6c9085dc.css" media="all">
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Kumar Shubham</a>
+    </h1>
+
+    <div class="header-menu">
+        
+
+        
+        
+
+        <p
+            class="small ">
+            <a href="/" >
+                /Home
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/posts" >
+                /Posts
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/about" >
+                /About
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+<div class="list-container">
+
+    <div class="breadcrumbs"><a href="/">Home</a><span class="breadcrumbs-separator">/</span><a href="/tags/">Tags</a><span class="breadcrumbs-separator">/</span>
+        <a href="/tags/interviews/">Interviews</a></div>
+
+    <h1>Interviews</h1>
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+    <div class="post-line">
+
+    
+    
+    
+    
+
+    <p class="line-date">18 Jan 2021 </p>
+
+    <div>
+        <p class="line-title">
+            <a href="/posts/spiral-printing-matrix-part-2/">
+                Spiral Printing Matrix Part 2
+            </a>
+        </p>
+
+        
+        <p class="line-summary"> <h3 class="heading" id="a-solution-which-looks-correct-but-isnt-">
+  A solution which looks correct but isn&rsquo;t 🤔
+  <a class="anchor" href="#a-solution-which-looks-correct-but-isnt-">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector&lt;<span style="font-weight:bold;text-decoration:underline">int</span>&gt; spiralOrder(vector&lt;vector&lt;<span style="font-weight:bold;text-decoration:underline">int</span>&gt;&gt;&amp; matrix) {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">int</span> rows = matrix.size();
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">int</span> columns = matrix[0].size();
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">int</span> top = 0;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">int</span> left = 0;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">int</span> right = columns-1;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">int</span> bottom = rows - 1;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        vector&lt;<span style="font-weight:bold;text-decoration:underline">int</span>&gt; result;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">while</span>(top &lt;= bottom &amp;&amp; left &lt;= right) {
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold;text-decoration:underline">for</span>(<span style="font-weight:bold;text-decoration:underline">int</span> i = left; i &lt;= right; i++) {
+</span></span><span style="display:flex;"><span>                result.push_back(matrix[top][i]);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            top++;
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold;text-decoration:underline">for</span>(<span style="font-weight:bold;text-decoration:underline">int</span> i = top; i &lt;= bottom; i++) {
+</span></span><span style="display:flex;"><span>                result.push_back(matrix[i][right]);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            right--;
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold;text-decoration:underline">for</span>(<span style="font-weight:bold;text-decoration:underline">int</span> i = right; i &gt;= left; i--) {
+</span></span><span style="display:flex;"><span>                result.push_back(matrix[bottom][i]);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            bottom--;
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold;text-decoration:underline">for</span>(<span style="font-weight:bold;text-decoration:underline">int</span> i = bottom; i &gt;= top; i--) {
+</span></span><span style="display:flex;"><span>                result.push_back(matrix[i][left]);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            left++;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">return</span> result;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>The above solution perfectly adheres to the idea we discussed in the previous post, but however one problem is that
+given a non square matrix:<!-- raw HTML omitted -->
+<code>[[1,2,3,4],[5,6,7,8],[9,10,11,12]]</code></p> </p>
+        
+    </div>
+</div>
+    
+
+    
+
+    
+    <div class="post-line">
+
+    
+    
+    
+    
+
+    <p class="line-date">14 Jan 2021 </p>
+
+    <div>
+        <p class="line-title">
+            <a href="/posts/spiral-printing-matrix/">
+                Spirally Printing a Matrix | Part 1
+            </a>
+        </p>
+
+        
+        <p class="line-summary"> <h2 class="heading" id="problem-statement">
+  Problem Statement
+  <a class="anchor" href="#problem-statement">#</a>
+</h2>
+<hr>
+<blockquote>
+<p>We are given <code>MxN</code> matrix and we have to print it spirally.
+For example, given:</p></blockquote>
+<pre tabindex="0"><code>Input: 
+[
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+Output: [1 , 2, 3, 6, 9, 8, 7, 4, 5]
+</code></pre><p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="img.png" src="/images/spiral_printing_matrix/img.png" >
+    </div>
+
+    
+</figure>
+</p>
+<h2 class="heading" id="approach">
+  Approach
+  <a class="anchor" href="#approach">#</a>
+</h2>
+<hr>
+<p>There could be several approaches to solve this problem. My personal way to solve this problem
+is by visualizing the bounds everytime we are going through the spiral.
+For instance, we can always have values of <code>top</code>, <code>left</code>, <code>right</code> and <code>bottom</code> initialised
+and move in those boundaries only.
+What do I mean by that is :</p> </p>
+        
+    </div>
+</div>
+    
+
+    
+
+    
+
+</div>
+
+    </main>
+  </div>
+
+  
+  
+
+
+
+
+
+    
+
+
+
+
+  <footer>
+    
+
+    
+    
+
+
+
+
+
+    
+
+
+
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

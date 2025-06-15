@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mojave on Kumar Shubham</title>
+    <link>https://example.org/tags/mojave/</link>
+    <description>Recent content in Mojave on Kumar Shubham</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Jun 2018 16:43:59 +0530</lastBuildDate>
+    <atom:link href="https://example.org/tags/mojave/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacOS Mojave Review (Developer Beta)</title>
+      <link>https://example.org/posts/macos-mojave-review-developer-preview/</link>
+      <pubDate>Tue, 26 Jun 2018 16:43:59 +0530</pubDate>
+      <guid>https://example.org/posts/macos-mojave-review-developer-preview/</guid>
+      <description>&lt;p&gt;Hi everyone,&lt;/p&gt;&#xA;&lt;p&gt;So this blog post is basically about the first impressions of the macOS mojave which is currently in developer beta.&lt;/p&gt;&#xA;&lt;p&gt;At first when I installed the beta it asks which appearance would you like to choose? &lt;strong&gt;Dark (obvious, eh)&lt;/strong&gt;, after all, this was one of the biggest features for which I wanted to try out MacOS Mojave.&lt;/p&gt;&#xA;&lt;p&gt;After the OS boots up, I did feel a bit of &lt;strong&gt;changes in animations&lt;/strong&gt; here and there, also some things opened up quicker than before.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
