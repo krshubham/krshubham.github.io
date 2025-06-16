@@ -15,6 +15,7 @@ showFooter = true
 footerContent = "Written with ❤️ by Kumar Shubham"
 mermaidTheme = "default"
 mermaidDarkTheme = "dark"
+faviconPath = 'images/'
 
 # Appearance settings
 theme = 'auto'
