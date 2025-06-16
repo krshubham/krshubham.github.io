@@ -39,6 +39,16 @@ TEMP_DIR=$(mktemp -d)
 echo "Copying built site to temporary directory: $TEMP_DIR"
 cp -r public/* "$TEMP_DIR/"
 
+# Ensure CNAME file is present in the built site
+echo "Ensuring CNAME file is present..."
+if [ -f "CNAME" ]; then
+    echo "Copying CNAME file to built site..."
+    cp CNAME "$TEMP_DIR/"
+else
+    echo "Creating CNAME file in built site..."
+    echo "krshubham.com" > "$TEMP_DIR/CNAME"
+fi
+
 # Switch to gh-pages branch (create if it doesn't exist)
 echo "Switching to gh-pages branch..."
 git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages || { echo "Failed to switch to gh-pages branch"; exit 1; }
