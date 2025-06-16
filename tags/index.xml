@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kumar Shubham</title>
-    <link>https://example.org/tags/</link>
+    <link>https://krshubham.com/tags/</link>
     <description>Recent content in Tags on Kumar Shubham</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Dec 2019 22:07:28 +0530</lastBuildDate>
-    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://krshubham.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Conference</title>
-      <link>https://example.org/tags/conference/</link>
+      <link>https://krshubham.com/tags/conference/</link>
       <pubDate>Mon, 16 Dec 2019 22:07:28 +0530</pubDate>
-      <guid>https://example.org/tags/conference/</guid>
+      <guid>https://krshubham.com/tags/conference/</guid>
       <description></description>
     </item>
     <item>
       <title>Stc</title>
-      <link>https://example.org/tags/stc/</link>
+      <link>https://krshubham.com/tags/stc/</link>
       <pubDate>Mon, 16 Dec 2019 22:07:28 +0530</pubDate>
-      <guid>https://example.org/tags/stc/</guid>
+      <guid>https://krshubham.com/tags/stc/</guid>
       <description></description>
     </item>
     <item>
       <title>Bytecode</title>
-      <link>https://example.org/tags/bytecode/</link>
+      <link>https://krshubham.com/tags/bytecode/</link>
       <pubDate>Fri, 17 May 2019 13:27:03 +0530</pubDate>
-      <guid>https://example.org/tags/bytecode/</guid>
+      <guid>https://krshubham.com/tags/bytecode/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>https://example.org/tags/java/</link>
+      <link>https://krshubham.com/tags/java/</link>
       <pubDate>Fri, 17 May 2019 13:27:03 +0530</pubDate>
-      <guid>https://example.org/tags/java/</guid>
+      <guid>https://krshubham.com/tags/java/</guid>
       <description></description>
     </item>
     <item>
       <title>MacOS</title>
-      <link>https://example.org/tags/macos/</link>
+      <link>https://krshubham.com/tags/macos/</link>
       <pubDate>Tue, 26 Jun 2018 16:43:59 +0530</pubDate>
-      <guid>https://example.org/tags/macos/</guid>
+      <guid>https://krshubham.com/tags/macos/</guid>
       <description></description>
     </item>
     <item>
       <title>Mojave</title>
-      <link>https://example.org/tags/mojave/</link>
+      <link>https://krshubham.com/tags/mojave/</link>
       <pubDate>Tue, 26 Jun 2018 16:43:59 +0530</pubDate>
-      <guid>https://example.org/tags/mojave/</guid>
+      <guid>https://krshubham.com/tags/mojave/</guid>
       <description></description>
     </item>
   </channel>
