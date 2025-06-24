@@ -8,7 +8,7 @@ definition:
 
 Gratitude is a powerful thing. It can change the way you think, the way you feel, and the way you live. It can make you appreciate the little things in life and make you feel happy, even in the toughest of times.
 
-The past few months have been a rollercoaster ride. I launched a new product, met new people, saw new places, lived life a little off the edge, and started marathon training with a sub-3:30 goal.
+The past few months have been a rollercoaster ride. I worked on launching a new product at work, met new people, saw new places, lived life a little off the edge, and started marathon training with a sub-3:30 goal.
 
 When everything is going super well, it is easy to say that you're grateful for everything! However, it is when the times are testing that losing hope becomes very easy. This is the time when gratitude matters the most.
 
