@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Stc on Kumar Shubham</title>
-    <link>https://krshubham.com/tags/stc/</link>
-    <description>Recent content in Stc on Kumar Shubham</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 16 Dec 2019 22:07:28 +0530</lastBuildDate>
-    <atom:link href="https://krshubham.com/tags/stc/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Software Testing Conference 2019</title>
-      <link>https://krshubham.com/posts/stc-2019/</link>
-      <pubDate>Mon, 16 Dec 2019 22:07:28 +0530</pubDate>
-      <guid>https://krshubham.com/posts/stc-2019/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Architect Continous Quality&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Me and some of the folks from AppDynamics Bangalore Office went to STC 2019, organized by QAI to attend this two day long conference. The conference covered a range of topics from the domain of Software Testing, including RPA to application of AI/ML to solve interesting problems in Software Testing. I am going to list down the talks which I attended and the key take-aways from that talk. So let&amp;rsquo;s go 🙂&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Stc on Kumar Shubham</title>
+		<link>https://krshubham.co/tags/stc/</link>
+		<description>Recent content in Stc on Kumar Shubham</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 16 Dec 2019 22:07:28 +0530</lastBuildDate>
+		
+			<atom:link href="https://krshubham.co/tags/stc/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Software Testing Conference 2019</title>
+				<link>https://krshubham.co/posts/stc-2019/</link>
+				<pubDate>Mon, 16 Dec 2019 22:07:28 +0530</pubDate>
+				<guid>https://krshubham.co/posts/stc-2019/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Architect Continous Quality&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Me and some of the folks from AppDynamics Bangalore Office went to STC 2019, organized by QAI to attend this two day long conference. The conference covered a range of topics from the domain of Software Testing, including RPA to application of AI/ML to solve interesting problems in Software Testing. I am going to list down the talks which I attended and the key take-aways from that talk. So let&amp;rsquo;s go 🙂&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

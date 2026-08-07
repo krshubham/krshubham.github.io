@@ -20,11 +20,11 @@
 
 
 
-<link rel="icon" type="image/ico" href="https://krshubham.com/images/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://krshubham.com/images/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://krshubham.com/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://krshubham.com/images/android-chrome-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://krshubham.com/images/apple-touch-icon.png">
+<link rel="icon" type="image/ico" href="https://krshubham.co/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://krshubham.co/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://krshubham.co/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://krshubham.co/images/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://krshubham.co/images/apple-touch-icon.png">
 
 <meta name="description" content=""/>
 
@@ -36,9 +36,9 @@
     
 </title>
 
-<link rel="canonical" href="https://krshubham.com/posts/togetherness-of-a-family/"/>
+<link rel="canonical" href="https://krshubham.co/posts/togetherness-of-a-family/"/>
 
-<meta property="og:url" content="https://krshubham.com/posts/togetherness-of-a-family/">
+<meta property="og:url" content="https://krshubham.co/posts/togetherness-of-a-family/">
   <meta property="og:site_name" content="Kumar Shubham">
   <meta property="og:title" content="Togetherness of a Family: A tree problem">
   <meta property="og:description" content="About the Problem # The problem is a typical tree problem:
@@ -60,7 +60,7 @@ In the world of magic land, there is a park in which a group of people are playi
 
 
 
-<link rel="stylesheet" href="/assets/combined.min.92c3bf7119b98cfdc79e93f36a451eb901d8bbbfed7d75814e6436cf6c9085dc.css" media="all">
+<link rel="stylesheet" href="/assets/combined.min.619f32e4c348e834c53d8e14d9f1a49ed9e3b058c8a2c928f2cfdf8160d837b4.css" media="all">
 
 
 
@@ -68,7 +68,7 @@ In the world of magic land, there is a park in which a group of people are playi
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-xxxxxxxxx"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -114,7 +114,7 @@ In the world of magic land, there is a park in which a group of people are playi
     
 
     <h1 class="header-title">
-        <a href="https://krshubham.com/">Kumar Shubham</a>
+        <a href="https://krshubham.co/">Kumar Shubham</a>
     </h1>
 
     <div class="header-menu">
@@ -189,7 +189,7 @@ In the world of magic land, there is a park in which a group of people are playi
   <a class="anchor" href="#about-the-problem">#</a>
 </h3>
 <p>The problem is a typical tree problem:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>In the world of magic land, there is a park in which a group of people are playing a game. Every person in the group is a child of one another person in the group except one person who is the parent of all the people in the group. Here, each person is represented by a number that if there are ‘n’ persons in the group then they are represented by numbers 1 to 7. The direct and indirect child relationship is defined as follows:
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>In the world of magic land, there is a park in which a group of people are playing a game. Every person in the group is a child of one another person in the group except one person who is the parent of all the people in the group. Here, each person is represented by a number that if there are ‘n’ persons in the group then they are represented by numbers 1 to 7. The direct and indirect child relationship is defined as follows:
 </span></span><span style="display:flex;"><span>(i) A person ‘b’ is said to be direct child of ‘a’ if ‘a’ is parent of ‘b’.
 </span></span><span style="display:flex;"><span>(ii) Person is ‘c’ is said to be indirect child of ‘a’ when ‘c’ is child of ‘b’ and ‘b’ is child of ‘a’.
 </span></span><span style="display:flex;"><span>(iii) A indirect child ‘i’ of a person ‘p’ is also an indirect child of parent of ‘p’.
@@ -238,7 +238,8 @@ be best represented using graphs.</p>
 <p>Basically , after you&rsquo;re able to store all the data in appropriate data structures, the question  boils down to
 this:</p>
 <blockquote>
-<p>Given a node, find the number of its children which  have prime number as their token values</p></blockquote>
+<p>Given a node, find the number of its children which  have prime number as their token values</p>
+</blockquote>
 <h3 class="heading" id="approaches">
   Approaches
   <a class="anchor" href="#approaches">#</a>
@@ -264,7 +265,7 @@ node and store beforehand. Now we can answer queries in constant time.</li>
   Python implementation for this problem
   <a class="anchor" href="#python-implementation-for-this-problem">#</a>
 </h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">import</span> <span style="color:#666;font-weight:bold;font-style:italic">math</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">import</span> <span style="color:#666;font-weight:bold;font-style:italic">math</span>
 </span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Number of people</span>
 </span></span><span style="display:flex;"><span>n = <span style="font-weight:bold;font-style:italic">int</span>(<span style="font-weight:bold;font-style:italic">input</span>())
 </span></span><span style="display:flex;"><span>tokens = [] <span style="color:#888;font-style:italic"># For storing tokens</span>
@@ -319,9 +320,9 @@ node and store beforehand. Now we can answer queries in constant time.</li>
   C++ implementation for the same:
   <a class="anchor" href="#c-implementation-for-the-same">#</a>
 </h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CPP" data-lang="CPP"><span style="display:flex;"><span><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;iostream&gt;</span><span style="color:#888;font-weight:bold">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CPP" data-lang="CPP"><span style="display:flex;"><span><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;iostream&gt;</span><span style="color:#888;font-weight:bold">
 </span></span></span><span style="display:flex;"><span><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;vector&gt;</span><span style="color:#888;font-weight:bold">
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-weight:bold"></span><span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> MAXN = 1e3+5;
 </span></span><span style="display:flex;"><span>
