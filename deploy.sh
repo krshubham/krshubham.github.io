@@ -46,7 +46,7 @@ if [ -f "CNAME" ]; then
     cp CNAME "$TEMP_DIR/"
 else
     echo "Creating CNAME file in built site..."
-    echo "krshubham.com" > "$TEMP_DIR/CNAME"
+    echo "krshubham.co" > "$TEMP_DIR/CNAME"
 fi
 
 # Switch to gh-pages branch (create if it doesn't exist)
